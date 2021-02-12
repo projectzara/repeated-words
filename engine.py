@@ -33,7 +33,11 @@ final_list = []
 for tokenized_list in tokenized_lists:
     final_list += tokenized_list
 
-words_frequency = [final_list.count(word) for word in final_list] 
-frequency_dict = dict(list(zip(final_list, words_frequency)))
+words_frequency = []
+freq_dic = {}
 
-print(frequency_dict)
+for word in final_list:
+    print(f"Working on {word}")
+    freq_dic[word] = final_list.count(word) 
+
+print(len(freq_dic))
