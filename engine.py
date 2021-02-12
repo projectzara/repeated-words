@@ -1,4 +1,5 @@
 import os 
+import json 
 import hazm 
 
 normalizer = hazm.Normalizer()
@@ -40,4 +41,6 @@ for word in final_list:
     print(f"Working on {word}")
     freq_dic[word] = final_list.count(word) 
 
-print(len(freq_dic))
+json_file = json.dump(freq_dic) 
+with open("words.json", "w") as out_file:
+    out_file.write(json)
