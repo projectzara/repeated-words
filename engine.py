@@ -43,4 +43,4 @@ for word in final_list:
 
 json_file = json.dumps(freq_dic) 
 with open("words.json", "w") as out_file:
-    out_file.write(json)
+    out_file.write(json_file)
